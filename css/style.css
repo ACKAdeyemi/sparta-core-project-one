@@ -65,7 +65,7 @@ main {
   background: white;
   border-radius: 50%;
   position: absolute;
-  left: 390px;
+  /* left: 390px; */
 }
 #paddle {
   height:15px;
@@ -73,6 +73,6 @@ main {
   background: white;
   border-radius: 10px;
   position: absolute;
-  left: 300px;
+  /* left: 300px; */
   bottom: 30px;
 }
