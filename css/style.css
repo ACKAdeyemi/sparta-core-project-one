@@ -1,0 +1,78 @@
+body {
+  font-family: arial;
+  text-align: center;
+  margin: 0 auto;
+  background-image: url(../images/retro-background-2.jpg);
+  background-size: cover;
+}
+
+/* Main Content Container - displays Title GIF */
+main {
+  margin: 30px auto;
+  width: 70vw;
+  height: 70vh;
+  background-image: url(../images/title-background.gif);
+  background-position: center;
+  background-size: cover;
+}
+
+/* Start and How To Play Buttons */
+.btn-container {
+  position: fixed;
+  bottom: 5px;
+  left: 300px;
+}
+#start-btn,
+#how-to-btn {
+  font-size: 1.5em;
+  font-weight: bolder;
+  margin: 0px 300px 10px 300px;
+  padding:.5em 1.5em;
+  border-radius: 1.5em;
+  background: #002357;
+  color:#fff;
+  border: 5px solid #2070e8;
+  transition: 0.8s;
+  outline: none;
+}
+#start-btn:hover,
+#how-to-btn:hover {
+  background: #49024f;
+  color: #fff;
+  border: 5px solid #d820e8;
+}
+#start-btn:active,
+#how-to-btn:active {
+  background: #000;
+  color: #fff;
+  border: 5px solid #505050;
+}
+
+/* Game Frame - contains Game Objects */
+.game-container {
+  width: 800px;
+  height: 480px;
+  margin: 40px auto;
+  background: #000;
+  border-radius: 1em;
+  position: relative;
+  display: none;
+}
+/* Game Objects */
+#ball {
+  height:15px;
+  width:15px;
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+  left: 390px;
+}
+#paddle {
+  height:15px;
+  width:200px;
+  background: white;
+  border-radius: 10px;
+  position: absolute;
+  left: 300px;
+  bottom: 30px;
+}
