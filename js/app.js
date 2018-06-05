@@ -4,6 +4,7 @@ $(document).ready(function(){
   var timerRunning = false;
 
   var $container = $('#game-container');
+  var $modal = $('#how-to-modal');
 
   var $ball = $('#ball');
   var ballPosX = 0;
@@ -16,9 +17,13 @@ $(document).ready(function(){
   var stopLeft = false;
   var stopRight = false;
 
+  var ballStartPos = $('#ball-start-pos').position();
+
   $('#start-btn').click(function(){
 
-    $container.css('display','block');
+    $container.toggle();
+    $('#start-btn').toggle();
+    $('#how-to-btn').toggle();
 
     window.addEventListener("keydown", function (event){
       console.log(event.keyCode);
@@ -149,5 +154,8 @@ $(document).ready(function(){
     } // else end
   }); // START GAME click end
 
+  $('#how-to-btn').click(function(){
+    $modal.toggle();
+  }); // HOW TO PLAY click end
 
 }); // DOM end
