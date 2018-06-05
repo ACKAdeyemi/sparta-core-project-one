@@ -3,8 +3,9 @@ $(document).ready(function(){
   var interval;
   var timerRunning = false;
 
-  var $container = $('#game-container');
-  var $modal = $('#how-to-modal');
+  var $gameContainer = $('#game-container');
+  var $howToModal = $('#how-to-modal');
+  var $gameOverModal = $('#game-over-modal');
 
   var $ball = $('#ball');
   var ballPosX = 0;
@@ -19,7 +20,7 @@ $(document).ready(function(){
 
   $('#start-btn').click(function(){
 
-    $container.toggle();
+    $gameContainer.toggle();
     $('#start-btn').toggle();
     $('#how-to-btn').toggle();
 
@@ -33,7 +34,6 @@ $(document).ready(function(){
 
         if (event.keyCode === 65 && stopLeft === true) {
           $paddle.css({'left' : '0px'});
-          // paddlePosX = 0;
           console.log('Paddle hit left side!');
         }
       }
@@ -43,11 +43,9 @@ $(document).ready(function(){
 
         if (event.keyCode === 68 && stopRight === true) {
           $paddle.css({'left' : '0px'});
-          // paddlePosX = 0;
           console.log('Paddle hit right side!');
         }
       }
-
     });
 
     if (timerRunning) {
@@ -67,10 +65,10 @@ $(document).ready(function(){
         var ballRight = ballLeft + $ball.width();
         var ballBottom = ballTop + $ball.height();
 
-        var containerLeft = $container.offset().left;
-        var containerTop = $container.offset().top;
-        var containerRight = containerLeft + $container.width();
-        var containerBottom = containerTop + $container.height();
+        var containerLeft = $gameContainer.offset().left;
+        var containerTop = $gameContainer.offset().top;
+        var containerRight = containerLeft + $gameContainer.width();
+        var containerBottom = containerTop + $gameContainer.height();
 
         // Move ball along X-Axis
         if (ballDirectionX === '+') {
@@ -99,17 +97,25 @@ $(document).ready(function(){
           ballPosY--;
         }
 
-        // When ballRight > containerRight
+        // When ballRight > containerRight - change direction to left
         if (ballRight > containerRight) {
           ballDirectionX = '-';
         }
-        // When ballLeft < containerLeft
+        // When ballLeft < containerLeft - change direction to right
         if (ballLeft < containerLeft) {
           ballDirectionX = '+';
         }
-        // When ballTop < containerTop
+        // When ballTop < containerTop - change direction to down
         if (ballTop < containerTop) {
           ballDirectionY = '+';
+        }
+
+        // When ballBottom hits containerBottom - game over (needs to change when multiple balls exist)
+        if (ballBottom > containerBottom) {
+          $gameContainer.toggle();
+          $gameOverModal.toggle();
+          clearInterval(interval);
+          timerRunning = !timerRunning;
         }
 
         // ball and paddle collision
@@ -132,15 +138,35 @@ $(document).ready(function(){
         if (paddleRight < containerRight) {
           stopRight = false;
         }
-
-        return stopLeft, stopRight;
       },10);
       timerRunning = !timerRunning;
     } // else end
   }); // START GAME click end
 
+  $('#restart-btn').click(function(){
+    $gameContainer.toggle(); // turns on
+    $gameOverModal.css({ // turn off
+      'display': 'none'
+    });
+    $ball.css({ // repositions ball to top left position
+      'top': '0px',
+      'left': '0px'
+    });
+  }); // RESTART click end
+
+  $('#main-menu-btn').click(function(){
+    $('#start-btn').toggle();
+    $('#how-to-btn').toggle();
+    $gameOverModal.css({
+      'display': 'none'
+    });
+    $gameContainer.css({
+      'display': 'none'
+    });
+  }); // MAIN MENU click end
+
   $('#how-to-btn').click(function(){
-    $modal.toggle();
+    $howToModal.toggle();
   }); // HOW TO PLAY click end
 
 }); // DOM end
