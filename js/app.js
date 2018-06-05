@@ -17,8 +17,6 @@ $(document).ready(function(){
   var stopLeft = false;
   var stopRight = false;
 
-  var ballStartPos = $('#ball-start-pos').position();
-
   $('#start-btn').click(function(){
 
     $container.toggle();

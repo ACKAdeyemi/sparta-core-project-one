@@ -22,8 +22,8 @@ main {
   bottom: 5px;
   left: 300px;
 }
-#start-btn,
-#how-to-btn {
+.start-btn,
+.how-to-btn {
   font-size: 1.5em;
   font-weight: bolder;
   margin: 0px 300px 10px 300px;
@@ -35,14 +35,14 @@ main {
   transition: 0.8s;
   outline: none;
 }
-#start-btn:hover,
-#how-to-btn:hover {
+.start-btn:hover,
+.how-to-btn:hover {
   background: #49024f;
   color: #fff;
   border: 5px solid #d820e8;
 }
-#start-btn:active,
-#how-to-btn:active {
+.start-btn:active,
+.how-to-btn:active {
   background: #000;
   color: #fff;
   border: 5px solid #505050;
@@ -84,14 +84,14 @@ main {
 }
 
 /* Game Objects */
-#ball {
+.ball {
   height:15px;
   width:15px;
   background: white;
   border-radius: 50%;
   position: absolute;
 }
-#paddle {
+.paddle {
   height:15px;
   width:200px;
   background: white;
