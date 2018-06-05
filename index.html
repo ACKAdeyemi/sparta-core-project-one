@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" type="image/png" href="images/game-icon.png">
+    <!-- JS Scripts below, jQ loads first -->
+    <script src="js/jquery-3.3.1.min.js" charset="utf-8"></script>
+    <script src="js/app.js" charset="utf-8"></script>
+    <!-- CSS stylesheet link below -->
+    <link rel="stylesheet" href="css/style.css">
+    <title>BRICKless BREAKout</title>
+  </head>
+
+  <body>
+    <main>
+      <div class="game-container" id="game-container">
+        <div class="ball" id="ball"></div>
+        <div class="paddle" id="paddle"></div>
+      </div>
+
+      <div class="how-to-modal" id="how-to-modal">
+        <div class="how-to-top">
+          <header>HOW TO PLAY</header>
+        </div>
+        <div class="how-to-left-right">
+          <p>You are the PADDLE, your enemy is the BALL</p>
+          <br>
+          <p class="how-to-left">Press 'A' Key to move <strong>LEFT</strong></p>
+          <p class="how-to-right">Press 'D' Key to move <strong>RIGHT</strong></p>
+        </div>
+        <div class="how-to-bottom">
+          <p><em>If ball hits top of screen =</em><strong> BALL +1 & POINTS +1</strong>
+          <br>
+          <br>
+          <em>If ball hits bottom of screen =</em><strong> BALL -1</strong>
+          <br>
+          <br>
+          <em>If all balls hit bottom of screen =</em><strong> GAME OVER</strong>
+          <br>
+          <br>
+          <br>
+          <span class="only-the-best">Only the best dare to beat the high score...</span></p>
+        </div>
+      </div>
+
+      <div class="btn-container">
+        <div class="start-btn" id="start-btn">START</div>
+        <div class="how-to-btn" id="how-to-btn">HOW TO PLAY</div>
+      </div>
+    </main>
+  </body>
+</html>
