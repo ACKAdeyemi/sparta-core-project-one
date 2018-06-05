@@ -114,19 +114,6 @@ $(document).ready(function(){
           ballDirectionY = '+';
         }
 
-        // When ballBottom hits containerBottom - remove when ready to add remove balls functionality
-        // Temp functionality, alert (don't use in final) + ball reset
-        if (ballBottom > containerBottom) {
-          // ballDirectionY = '-';
-          alert('GAME OVER - The ball has hit the bottom - position reset');
-          ballDirectionX = '+';
-          ballDirectionY = '+';
-          $ball.css({
-            'top': '0px',
-            'left': '0px'
-          });
-        }
-
         // ball and paddle collision
         if (ballBottom > paddleTop &&
           paddleLeft < ballRight &&
