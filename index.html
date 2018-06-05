@@ -16,9 +16,9 @@
   <body>
     <main>
       <div class="game-container" id="game-container">
-        <div id="ball-start-pos"></div>
-        <div id="ball"></div>
-        <div id="paddle"></div>
+        <div class="ball-start-pos" id="ball-start-pos"></div>
+        <div class="ball" id="ball"></div>
+        <div class="paddle" id="paddle"></div>
       </div>
 
       <div class="how-to-modal" id="how-to-modal">
@@ -46,9 +46,27 @@
         </div>
       </div>
 
+      <div class="game-over-modal" id="game-over-modal">
+        <div class="game-over-top">
+          <header>GAME OVER</header>
+        </div>
+        <div class="game-over-middle">
+          <p>HIGH SCORE: <span class="high-score" id="high-score">0</span></p>
+          <!-- <br> -->
+          <p>YOUR SCORE: <span class="player-score" id="player-score">0</span></p>
+          <br>
+          <p><span class="dare-to-play">Dare to play again?</span></p>
+          <div class="restart-btn" id="restart-btn">RESTART</div>
+          <br>
+          <div class="main-menu-btn" id="main-menu-btn">MAIN MENU</div>
+        </div>
+        <div class="game-over-bottom">
+        </div>
+      </div>
+
       <div class="btn-container">
-        <div id="start-btn">START</div>
-        <div id="how-to-btn">HOW TO PLAY</div>
+        <div class="start-btn" id="start-btn">START</div>
+        <div class="how-to-btn" id="how-to-btn">HOW TO PLAY</div>
       </div>
     </main>
   </body>

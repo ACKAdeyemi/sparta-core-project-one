@@ -16,17 +16,19 @@ main {
   background-size: cover;
 }
 
-/* Start and How To Play Buttons */
+/* Start, How To Play, Restart and Main Menu Buttons */
 .btn-container {
   position: fixed;
   bottom: 5px;
-  left: 300px;
+  left: 350px;
 }
-#start-btn,
-#how-to-btn {
+.start-btn,
+.how-to-btn,
+.restart-btn,
+.main-menu-btn {
   font-size: 1.5em;
   font-weight: bolder;
-  margin: 0px 300px 10px 300px;
+  margin: 0px 250px 10px 250px;
   padding:.5em 1.5em;
   border-radius: 1.5em;
   background: #002357;
@@ -35,14 +37,18 @@ main {
   transition: 0.8s;
   outline: none;
 }
-#start-btn:hover,
-#how-to-btn:hover {
+.start-btn:hover,
+.how-to-btn:hover,
+.restart-btn:hover,
+.main-menu-btn:hover {
   background: #49024f;
   color: #fff;
   border: 5px solid #d820e8;
 }
-#start-btn:active,
-#how-to-btn:active {
+.start-btn:active,
+.how-to-btn:active,
+.restart-btn:active,
+.main-menu-btn:active {
   background: #000;
   color: #fff;
   border: 5px solid #505050;
@@ -83,15 +89,36 @@ main {
   color: #8b8b8b;
 }
 
+/* Game Over Modal */
+.game-over-modal {
+  width: 800px;
+  height: 480px;
+  margin: 40px auto;
+  background: #000;
+  border-radius: 1em;
+  position: relative;
+  display: none;
+  color: #fff;
+}
+.game-over-top header {
+  padding: 35px 0 20px 0;
+  font-weight: bolder;
+  font-size: 3em;
+}
+.dare-to-play {
+  font-weight: bolder;
+  color: #8b8b8b;
+}
+
 /* Game Objects */
-#ball {
+.ball {
   height:15px;
   width:15px;
   background: white;
   border-radius: 50%;
   position: absolute;
 }
-#paddle {
+.paddle {
   height:15px;
   width:200px;
   background: white;

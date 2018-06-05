@@ -2,9 +2,11 @@ $(document).ready(function(){
 
   var interval;
   var timerRunning = false;
+  // var stopGame = false;
 
-  var $container = $('#game-container');
-  var $modal = $('#how-to-modal');
+  var $gameContainer = $('#game-container');
+  var $howToModal = $('#how-to-modal');
+  var $gameOverModal = $('#game-over-modal');
 
   var $ball = $('#ball');
   var ballPosX = 0;
@@ -17,13 +19,12 @@ $(document).ready(function(){
   var stopLeft = false;
   var stopRight = false;
 
-  var ballStartPos = $('#ball-start-pos').position();
-
   $('#start-btn').click(function(){
 
-    $container.toggle();
+    $gameContainer.toggle();
     $('#start-btn').toggle();
     $('#how-to-btn').toggle();
+    // $ball.css({'top': '0px','left': '0px'});
 
     window.addEventListener("keydown", function (event){
       console.log(event.keyCode);
@@ -69,10 +70,10 @@ $(document).ready(function(){
         var ballRight = ballLeft + $ball.width();
         var ballBottom = ballTop + $ball.height();
 
-        var containerLeft = $container.offset().left;
-        var containerTop = $container.offset().top;
-        var containerRight = containerLeft + $container.width();
-        var containerBottom = containerTop + $container.height();
+        var containerLeft = $gameContainer.offset().left;
+        var containerTop = $gameContainer.offset().top;
+        var containerRight = containerLeft + $gameContainer.width();
+        var containerBottom = containerTop + $gameContainer.height();
 
         // Move ball along X-Axis
         if (ballDirectionX === '+') {
@@ -114,17 +115,12 @@ $(document).ready(function(){
           ballDirectionY = '+';
         }
 
-        // When ballBottom hits containerBottom - remove when ready to add remove balls functionality
-        // Temp functionality, alert (don't use in final) + ball reset
+        // When ballBottom hits containerBottom - game over
         if (ballBottom > containerBottom) {
-          // ballDirectionY = '-';
-          alert('GAME OVER - The ball has hit the bottom - position reset');
-          ballDirectionX = '+';
-          ballDirectionY = '+';
-          $ball.css({
-            'top': '0px',
-            'left': '0px'
-          });
+          $gameContainer.toggle();
+          $gameOverModal.toggle();
+          clearInterval(interval);
+          timerRunning = !timerRunning;
         }
 
         // ball and paddle collision
@@ -154,8 +150,37 @@ $(document).ready(function(){
     } // else end
   }); // START GAME click end
 
+  $('#restart-btn').click(function(){
+    $gameContainer.toggle(); // turns on
+    $gameOverModal.css({ // turn off
+      'display': 'none'
+    });
+    $ball.css({ // repositions ball to top left position
+      'top': '0px',
+      'left': '0px'
+    });
+    // ballPosX = 0;
+    // ballPosY = 0;
+    // ballDirectionX = '+';
+    // ballDirectionY = '+';
+    // paddlePosX = 0;
+    // restartGame = !restartGame;
+    interval();
+  }); // RESTART click end
+
+  $('#main-menu-btn').click(function(){
+    $('#start-btn').toggle();
+    $('#how-to-btn').toggle();
+    $gameOverModal.css({
+      'display': 'none'
+    });
+    $gameContainer.css({
+      'display': 'none'
+    });
+  }); // MAIN MENU click end
+
   $('#how-to-btn').click(function(){
-    $modal.toggle();
+    $howToModal.toggle();
   }); // HOW TO PLAY click end
 
 }); // DOM end
