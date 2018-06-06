@@ -1,7 +1,5 @@
 $(document).ready(function(){
 
-  var timerRunning = false;
-
   var $gameContainer = $('#game-container');
   var $howToModal = $('#how-to-modal');
   var $gameOverModal = $('#game-over-modal');
@@ -16,10 +14,6 @@ $(document).ready(function(){
   var paddlePosX = 0;
   var stopLeft = false;
   var stopRight = false;
-
-  var score = 0;
-
-  var ballHitTop = false;
 
   $('#start-btn').click(function(){
     startGame();
@@ -55,18 +49,7 @@ $(document).ready(function(){
     });
   }; // START GAME function end
 
-  function updateScore () {
-    if (ballHitTop === true) {
-      ballHitTop = false;
-      score++;
-      console.log(score);
-      $('#game-score').text('Your Score: ' + score);
-    }
-    return score;
-  }
-
   function moveBall() {
-    updateScore();
     var paddleLeft = $paddle.offset().left;
     var paddleTop = $paddle.offset().top;
     var paddleRight = paddleLeft + $paddle.width();
@@ -126,7 +109,6 @@ $(document).ready(function(){
     if (ballBottom > containerBottom) {
       $gameContainer.toggle();
       $gameOverModal.toggle();
-      $('#end-score').text('YOUR SCORE: ' + score);
     }
 
     // ball and paddle collision
@@ -149,28 +131,21 @@ $(document).ready(function(){
     if (paddleRight < containerRight) {
       stopRight = false;
     }
-    return ballHitTop;
   }
 
   $('#restart-btn').click(function(){
     $gameContainer.toggle(); // turns on
-    ballPosX = 0;
-    ballPosY = 0;
-    paddlePosX = 0;
-    score = 0;
-    $('#game-score').text('Your Score: ' + score);
+    ballPosX = 10;
+    ballPosY = 10;
+    ballDirectionX = '+';
+    ballDirectionY = '+';
     $gameOverModal.css({ // turn off
       'display': 'none'
-    });
-    $ball.css({ // repositions ball to top left position
-      'top': '0px',
-      'left': '0px'
     });
   }); // RESTART click end
 
   $('#main-menu-btn').click(function(){
-    // STATEMENT BELOW REFRESHES THE WHOLE PAGE
-    location.reload();
+    // On cick, should take player back to the initial screen (before game screen)
   }); // MAIN MENU click end
 
   $('#how-to-btn').click(function(){

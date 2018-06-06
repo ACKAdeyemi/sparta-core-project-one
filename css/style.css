@@ -55,15 +55,19 @@ main {
 }
 
 /* Score */
-.high-score {
-  color: #fff;
-}
 .player-score {
   color: #fff;
 }
 
 /* Game Objects */
 .ball {
+  height:15px;
+  width:15px;
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+}
+.newBall {
   height:15px;
   width:15px;
   background: white;

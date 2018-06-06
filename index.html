@@ -21,8 +21,9 @@
       </div>
 
       <div class="game-container" id="game-container">
-        <div class="high-score" id="high-score">High Score:</div>
-        <div class="player-score" id="player-score">Your Score:</div>
+        <div class="player-score" id="player-score">
+          <p id="game-score">Your Score: 0</p>
+        </div>
         <div class="ball" id="ball"></div>
         <div class="paddle" id="paddle"></div>
       </div>
@@ -57,9 +58,7 @@
           <header>GAME OVER</header>
         </div>
         <div class="game-over-middle">
-          <p>HIGH SCORE: <span class="high-score" id="high-score">0</span></p>
-          <!-- <br> -->
-          <p>YOUR SCORE: <span class="player-score" id="player-score">0</span></p>
+          <p id="end-score">YOUR SCORE: 0</p>
           <br>
           <p><span class="dare-to-play">Dare to play again?</span></p>
           <div class="restart-btn" id="restart-btn">RESTART</div>
