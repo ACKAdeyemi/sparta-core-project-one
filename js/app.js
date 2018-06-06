@@ -15,6 +15,10 @@ $(document).ready(function(){
   var stopLeft = false;
   var stopRight = false;
 
+  var score = 0;
+
+  var ballHitTop = false;
+
   $('#start-btn').click(function(){
     startGame();
     setInterval(moveBall, 10);
@@ -49,7 +53,18 @@ $(document).ready(function(){
     });
   }; // START GAME function end
 
+  function updateScore () {
+    if (ballHitTop === true) {
+      ballHitTop = false;
+      score++;
+      console.log(score);
+      $('#game-score').text('Your Score: ' + score);
+    }
+  }
+
   function moveBall() {
+    updateScore();
+
     var paddleLeft = $paddle.offset().left;
     var paddleTop = $paddle.offset().top;
     var paddleRight = paddleLeft + $paddle.width();
@@ -109,6 +124,7 @@ $(document).ready(function(){
     if (ballBottom > containerBottom) {
       $gameContainer.toggle();
       $gameOverModal.toggle();
+      $('#end-score').text('YOUR SCORE: ' + score);
     }
 
     // ball and paddle collision
@@ -134,6 +150,8 @@ $(document).ready(function(){
   }
 
   $('#restart-btn').click(function(){
+    score = 0;
+    $('#game-score').text('Your Score: ' + score);
     $gameContainer.toggle(); // turns on
     ballPosX = 10;
     ballPosY = 10;
