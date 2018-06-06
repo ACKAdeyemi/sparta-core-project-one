@@ -11,9 +11,10 @@ $(document).ready(function(){
   var ballDirectionY = '+';
 
   var $paddle = $('#paddle');
-  var paddlePosX = 0;
+  var paddlePosX = 300;
   var stopLeft = false;
   var stopRight = false;
+  $paddle.css({'left' : `${paddlePosX}px`});
 
   var score = 0;
 
@@ -157,6 +158,8 @@ $(document).ready(function(){
     ballPosY = 10;
     ballDirectionX = '+';
     ballDirectionY = '+';
+    paddlePosX = 300;
+    $paddle.css({'left' : `${paddlePosX}px`});
     $gameOverModal.css({ // turn off
       'display': 'none'
     });
