@@ -166,7 +166,8 @@ $(document).ready(function(){
   }); // RESTART click end
 
   $('#main-menu-btn').click(function(){
-    // On cick, should take player back to the initial screen (before game screen)
+    // STATEMENT BELOW REFRESHES THE WHOLE PAGE - Back to Initial screen
+    location.reload();
   }); // MAIN MENU click end
 
   $('#how-to-btn').click(function(){
