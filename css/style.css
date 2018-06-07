@@ -16,7 +16,7 @@ main {
   background-size: cover;
 }
 
-/* Start, How To Play, Restart and Main Menu Buttons */
+/* Start, How To Play, Restart and Main Menu Buttons and states */
 .btn-container {
   position: fixed;
   bottom: 5px;
@@ -57,6 +57,7 @@ main {
 /* Score */
 .player-score {
   color: #fff;
+  padding-top: 20px;
 }
 
 /* Game Objects */
@@ -120,8 +121,11 @@ main {
   margin: 40px auto;
   background: #000;
   border-radius: 1em;
-  position: relative;
-  display: none;
+  position: relative; /* allows game objects to have collisions against their container */
+  display: none; /* hides element at page load */
+  background-image: url(../images/retro-background-1.jpg);
+  background-position: center;
+  background-size: cover;
 }
 
 /* Instructions/HowToPlay Modal */
@@ -140,7 +144,7 @@ main {
   font-weight: bolder;
   font-size: 3em;
 }
-.how-to-left-right {
+.how-to-middle {
   padding-bottom: 20px;
 }
 .only-the-best {
