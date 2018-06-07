@@ -63,7 +63,35 @@ main {
 .ball {
   height:15px;
   width:15px;
-  background: white;
+  background: red;
+  border-radius: 50%;
+  position: absolute;
+}
+.ball2 {
+  height:15px;
+  width:15px;
+  background: blue;
+  border-radius: 50%;
+  position: absolute;
+}
+.ball3 {
+  height:15px;
+  width:15px;
+  background: green;
+  border-radius: 50%;
+  position: absolute;
+}
+.ball4 {
+  height:15px;
+  width:15px;
+  background: yellow;
+  border-radius: 50%;
+  position: absolute;
+}
+.ball5 {
+  height:15px;
+  width:15px;
+  background: purple;
   border-radius: 50%;
   position: absolute;
 }
