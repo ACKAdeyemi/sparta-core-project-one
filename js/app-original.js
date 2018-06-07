@@ -5,7 +5,6 @@ $(document).ready(function(){
   var $gameOverModal = $('#game-over-modal');
 
   var $ball = $('.ball');
-  var $brick = $('.brick');
   var ballPosX = 0;
   var ballPosY = 0;
   var ballDirectionX = '+';
@@ -23,8 +22,7 @@ $(document).ready(function(){
 
   $('#start-btn').click(function(){
     startGame();
-    createBricks();
-    setInterval(gamePlay, 7);
+    setInterval(moveBall, 10);
   }); // START button click function end
 
   function startGame() {
@@ -60,14 +58,12 @@ $(document).ready(function(){
     if (ballHitTop === true) {
       ballHitTop = false;
       score++;
-      // console.log(score);
+      console.log(score);
       $('#game-score').text('Your Score: ' + score);
     }
   }
 
-  function gamePlay() {
-    $ball = $('.ball');
-    $brick = $('.brick');
+  function moveBall() {
     updateScore();
 
     var paddleLeft = $paddle.offset().left;
@@ -79,12 +75,6 @@ $(document).ready(function(){
     var ballTop = $ball.offset().top;
     var ballRight = ballLeft + $ball.width();
     var ballBottom = ballTop + $ball.height();
-
-    // `#${brickArr[i].id}`
-    var brickLeft = $brick.offset().left;
-    var brickTop = $brick.offset().top;
-    var brickRight = brickLeft + $brick.width();
-    var brickBottom = brickTop + $brick.height();
 
     var containerLeft = $gameContainer.offset().left;
     var containerTop = $gameContainer.offset().top;
@@ -143,6 +133,7 @@ $(document).ready(function(){
       paddleLeft < ballRight &&
       paddleRight > ballLeft) {
       ballDirectionY = '-';
+      console.log('collision top');
     }
 
     // check Paddle against Container
@@ -157,18 +148,6 @@ $(document).ready(function(){
     }
     if (paddleRight < containerRight) {
       stopRight = false;
-    }
-
-    // check brick for collision
-    // if collide, log brick id
-    // switch case for brick removal, if brick id is x, remove brick id x
-    // if (ballTop === brickBottom) {
-    //   ballDirectionY = '+';
-    // }
-    if (ballBottom > brickTop &&
-      brickLeft < ballRight &&
-      brickRight > ballLeft) {
-      ballDirectionY = '-';
     }
   }
 
@@ -195,32 +174,4 @@ $(document).ready(function(){
   $('#how-to-btn').click(function(){
     $howToModal.toggle();
   }); // HOW TO PLAY click end
-
-  // Brick creator function
-  var brickArr = [];
-  function createBricks() {
-    var addBrick = function(id,top,left) {
-      this.id = id,
-      this.top = top,
-      this.left = left
-    }
-    for (var i = 1; i <= 5; i++) {
-      var id = i;
-      var top = 100;
-      var left = i;
-      var brick = new addBrick(id,top,left);
-      brickArr.push(brick);
-    }
-    for (var i = 0; i < brickArr.length; i++) {
-      var left = `${brickArr[i].id}`;
-      var newBrick = $(`<div class="brick" id="${brickArr[i].id}">`);
-
-      $('.bricks').append(newBrick);
-
-      $(`#${brickArr[i].id}`).css({
-        'left': `${left}` * 103 + 'px',
-      });
-    }
-  }
-
 }); // DOM end
