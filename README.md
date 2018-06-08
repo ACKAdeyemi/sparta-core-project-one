@@ -1,5 +1,6 @@
 # <p align="center"> Sparta Core Project One</p>
 <hr>
+
 #### Task:
 A week long project with an objective of creating a browser based game using html, css and javascript.
 
@@ -8,7 +9,7 @@ A week long project with an objective of creating a browser based game using htm
 * Game over screen (with score)
 * Styled
 * Hosted online
-* Score 
+* Score
 * Fully functional
 * Implemented DRY Practices
 * Good Quality Markdown
@@ -22,7 +23,7 @@ A week long project with an objective of creating a browser based game using htm
 
 * Every time a ball on screen hits the top of the frame, another ball enters the scene and you the player earn a point
 * If you miss a ball and that ball hits the bottom of the frame, the ball is lost
-* The game ends when all the balls on the screen have been lost – so keep them for as long 
+* The game ends when all the balls on the screen have been lost – so keep them for as long
 
 **Story for my Game:** - You, the paddle Spartan, are a glorified warrior with many accolades. The champion of champions.
 At the bottom of the screen is your home land, Sparta.
@@ -30,9 +31,9 @@ Balls of fire are being rained upon your land and it is your job to protect it a
 You know it’s a suicide mission but honor is everything to you and you would rather die than to flee, allowing your home to be destroyed
 Deflect the balls of fire for as long as you can to prove that YOU are the ultimate warrior!
 
-A wise man once said: 
+A wise man once said:
 > “The mightiest warriors understand that their inevitable demise will be due to a deep love for something or someone, so die hard and die strong.”
- 
+
 **My MVP:**
 
 * Paddle movement
@@ -49,10 +50,10 @@ A wise man once said:
 
 
 
-**GitHub URL:** 
+**GitHub URL:**
 [https://github.com/ACKAdeyemi/sparta-custom-bootstrap](https://github.com/ACKAdeyemi/sparta-custom-bootstrap)
 
-**Demo Site URL:** 
+**Demo Site URL:**
 [https://github.com/ACKAdeyemi/sparta-custom-bootstrap](https://github.com/ACKAdeyemi/sparta-custom-bootstrap)
 
 **How to Download** - click 'clone or download' button, download a zip of our project, unzip, open the index.html and enjoy.
