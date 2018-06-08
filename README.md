@@ -56,6 +56,9 @@ A wise man once said:
 **Demo Site URL:**
 [https://ackadeyemi.github.io/sparta-core-project-one/](https://ackadeyemi.github.io/sparta-core-project-one/)
 
+**Trello (Task Tracking):**
+[https://trello.com/b/yMVFRjnR](https://trello.com/b/yMVFRjnR)
+
 **How to Download** - click 'clone or download' button, download a zip of our project, unzip, open the index.html and enjoy.
 
 #### Challenges:
