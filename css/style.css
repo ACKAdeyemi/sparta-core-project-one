@@ -1,0 +1,172 @@
+body {
+  font-family: arial;
+  text-align: center;
+  margin: 0 auto;
+  background-color: #33cccc;
+}
+
+/* Main Content Container - displays Title GIF */
+main {
+  margin: 30px auto;
+  width: 70vw;
+  height: 70vh;
+  background-image: url(../images/site-bg2.gif);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Start, How To Play, Restart and Main Menu Buttons and states */
+.btn-container {
+  position: fixed;
+  bottom: 5px;
+  left: 350px;
+}
+.start-btn,
+.how-to-btn,
+.restart-btn,
+.main-menu-btn {
+  font-size: 1.5em;
+  font-weight: bolder;
+  margin: 0px 250px 10px 250px;
+  padding:.5em 1.5em;
+  border-radius: 1.5em;
+  background: #002357;
+  color:#fff;
+  border: 5px solid #2070e8;
+  transition: 0.8s;
+  outline: none;
+}
+.start-btn:hover,
+.how-to-btn:hover,
+.restart-btn:hover,
+.main-menu-btn:hover {
+  background: #49024f;
+  color: #fff;
+  border: 5px solid #d820e8;
+}
+.start-btn:active,
+.how-to-btn:active,
+.restart-btn:active,
+.main-menu-btn:active {
+  background: #000;
+  color: #fff;
+  border: 5px solid #505050;
+}
+
+/* Score */
+.player-score {
+  color: #fff;
+  padding-top: 20px;
+}
+
+/* Game Objects */
+.ball {
+  height:25px;
+  width:25px;
+  background-image: url(../images/fire.png);
+  background-size: cover;
+  border-radius: 50%;
+  position: absolute;
+
+}
+.ball2 {
+  height:25px;
+  width:25px;
+  background-image: url(../images/fire.png);
+  background-size: cover;
+  border-radius: 50%;
+  position: absolute;
+}
+.ball3 {
+  height:25px;
+  width:25px;
+  background-image: url(../images/fire.png);
+  background-size: cover;
+  border-radius: 50%;
+  position: absolute;
+}
+.ball4 {
+  height:25px;
+  width:25px;
+  background-image: url(../images/fire.png);
+  background-size: cover;
+  border-radius: 50%;
+  position: absolute;
+}
+.ball5 {
+  height:25px;
+  width:25px;
+  background-image: url(../images/fire.png);
+  background-size: cover;
+  border-radius: 50%;
+  position: absolute;
+}
+.paddle {
+  height:80px;
+  width:180px;
+  background-image: url(../images/Paddle2.png);
+  /* background-size: cover; */
+  /* border-radius: 10px; */
+  position: absolute;
+  bottom: 0px;
+}
+
+/* Game Frame/Screen - contains Game Objects */
+.game-container {
+  width: 800px;
+  height: 480px;
+  margin: 40px auto;
+  background: #000;
+  border-radius: 1em;
+  position: relative; /* allows game objects to have collisions against their container */
+  display: none; /* hides element at page load */
+  background-image: url(../images/game-container-bg.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+/* Instructions/HowToPlay Modal */
+.how-to-modal {
+  width: 800px;
+  height: 480px;
+  margin: 40px auto;
+  background: #000;
+  border-radius: 1em;
+  position: relative;
+  display: none;
+  color: #fff;
+}
+.how-to-top header {
+  padding: 35px 0 20px 0;
+  font-weight: bolder;
+  font-size: 3em;
+}
+.how-to-middle {
+  padding-bottom: 20px;
+}
+.only-the-best {
+  font-weight: bolder;
+  color: #8b8b8b;
+}
+
+/* Game Over Modal */
+.game-over-modal {
+  width: 800px;
+  height: 480px;
+  margin: 40px auto;
+  background: #000;
+  border-radius: 1em;
+  position: relative;
+  display: none;
+  color: #fff;
+}
+.game-over-top header {
+  padding: 35px 0 20px 0;
+  font-weight: bolder;
+  font-size: 3em;
+}
+.dare-to-play {
+  font-weight: bolder;
+  color: #8b8b8b;
+}
