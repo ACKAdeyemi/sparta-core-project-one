@@ -54,7 +54,7 @@ A wise man once said:
 [https://github.com/ACKAdeyemi/sparta-custom-bootstrap](https://github.com/ACKAdeyemi/sparta-custom-bootstrap)
 
 **Demo Site URL:**
-[https://ackadeyemi.github.io/sparta-core-project-one/](https://github.com/ACKAdeyemi/sparta-custom-bootstrap)
+[https://ackadeyemi.github.io/sparta-core-project-one/](https://ackadeyemi.github.io/sparta-core-project-one/)
 
 **How to Download** - click 'clone or download' button, download a zip of our project, unzip, open the index.html and enjoy.
 
