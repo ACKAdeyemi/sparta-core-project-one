@@ -58,9 +58,9 @@ A wise man once said:
 **How to Download** - click 'clone or download' button, download a zip of our project, unzip, open the index.html and enjoy.
 
 ####Challenges:
-* Paddle ball collisions
+* Paddle and ball collisions
 * Ball movement
-* Adding balls to the scene
+* Adding balls to the scene that have independent movement i.e. angular movement, positoning and speed particular to itself
 * Creating ‘simple’/DRY functions that do complex things
 
 
