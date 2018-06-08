@@ -1,9 +1,9 @@
-#<p align="center">Sparta Core Project One</p>
+# <p align="center"> Sparta Core Project One</p>
 <hr>
-####Task:
+#### Task:
 A week long project with an objective of creating a browser based game using html, css and javascript.
 
-####It must have/be:
+#### It must have/be:
 * Instructions
 * Game over screen (with score)
 * Styled
@@ -16,7 +16,7 @@ A week long project with an objective of creating a browser based game using htm
 * Proper HTML/JS/CSS Code Standards (Indentation, spacing, naming conventions)
 
 
-#<p align="center">My Game - BRICKless BREAKout</p>
+# <p align="center"> My Game - BRICKless BREAKout</p>
 
 **Description** - My game is based on the classic game 'Breakout' originally released in 1976 by Atari. My version has a twist - there aren't any bricks. My game works uses the follwing mechanics:
 
@@ -57,7 +57,7 @@ A wise man once said:
 
 **How to Download** - click 'clone or download' button, download a zip of our project, unzip, open the index.html and enjoy.
 
-####Challenges:
+#### Challenges:
 * Paddle and ball collisions
 * Ball movement
 * Adding balls to the scene that have independent movement i.e. angular movement, positoning and speed particular to itself
@@ -89,5 +89,5 @@ function ballCounterUpdate() {
 ```
 <hr>
 
-#<p align="center">index/Home page screenshot</p>
+# <p align="center"> index/Home page screenshot</p>
 ![Screenshot of game frame/container](images/index-sc.png)
