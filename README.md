@@ -61,7 +61,7 @@ A wise man once said:
 #### Challenges:
 * Paddle and ball collisions
 * Ball movement
-* Adding balls to the scene that have independent movement i.e. angular movement, positoning and speed particular to itself
+* Adding balls to the scene that have independent movement i.e. angular movement, positioning and speed particular to itself
 * Creating ‘simple’/DRY functions that do complex things
 
 
