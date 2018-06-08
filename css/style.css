@@ -2,8 +2,7 @@ body {
   font-family: arial;
   text-align: center;
   margin: 0 auto;
-  background-image: url(../images/retro-background-2.jpg);
-  background-size: cover;
+  background-color: #33cccc;
 }
 
 /* Main Content Container - displays Title GIF */
@@ -11,12 +10,13 @@ main {
   margin: 30px auto;
   width: 70vw;
   height: 70vh;
-  background-image: url(../images/title-background.gif);
+  background-image: url(../images/site-bg2.gif);
+  background-size: contain;
   background-position: center;
-  background-size: cover;
+  background-repeat: no-repeat;
 }
 
-/* Start, How To Play, Restart and Main Menu Buttons */
+/* Start, How To Play, Restart and Main Menu Buttons and states */
 .btn-container {
   position: fixed;
   bottom: 5px;
@@ -57,30 +57,59 @@ main {
 /* Score */
 .player-score {
   color: #fff;
+  padding-top: 20px;
 }
 
 /* Game Objects */
 .ball {
-  height:15px;
-  width:15px;
-  background: white;
+  height:25px;
+  width:25px;
+  background-image: url(../images/fire.png);
+  background-size: cover;
+  border-radius: 50%;
+  position: absolute;
+
+}
+.ball2 {
+  height:25px;
+  width:25px;
+  background-image: url(../images/fire.png);
+  background-size: cover;
   border-radius: 50%;
   position: absolute;
 }
-.newBall {
-  height:15px;
-  width:15px;
-  background: white;
+.ball3 {
+  height:25px;
+  width:25px;
+  background-image: url(../images/fire.png);
+  background-size: cover;
+  border-radius: 50%;
+  position: absolute;
+}
+.ball4 {
+  height:25px;
+  width:25px;
+  background-image: url(../images/fire.png);
+  background-size: cover;
+  border-radius: 50%;
+  position: absolute;
+}
+.ball5 {
+  height:25px;
+  width:25px;
+  background-image: url(../images/fire.png);
+  background-size: cover;
   border-radius: 50%;
   position: absolute;
 }
 .paddle {
-  height:15px;
-  width:200px;
-  background: white;
-  border-radius: 10px;
+  height:80px;
+  width:180px;
+  background-image: url(../images/Paddle2.png);
+  /* background-size: cover; */
+  /* border-radius: 10px; */
   position: absolute;
-  bottom: 30px;
+  bottom: 0px;
 }
 
 /* Game Frame/Screen - contains Game Objects */
@@ -90,8 +119,11 @@ main {
   margin: 40px auto;
   background: #000;
   border-radius: 1em;
-  position: relative;
-  display: none;
+  position: relative; /* allows game objects to have collisions against their container */
+  display: none; /* hides element at page load */
+  background-image: url(../images/game-container-bg.jpg);
+  background-position: center;
+  background-size: cover;
 }
 
 /* Instructions/HowToPlay Modal */
@@ -110,7 +142,7 @@ main {
   font-weight: bolder;
   font-size: 3em;
 }
-.how-to-left-right {
+.how-to-middle {
   padding-bottom: 20px;
 }
 .only-the-best {

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Window/Tab icon below -->
     <link rel="icon" type="image/png" href="images/game-icon.png">
     <!-- JS Scripts below, jQ loads first -->
     <script src="js/jquery-3.3.1.min.js" charset="utf-8"></script>
@@ -18,26 +19,34 @@
       <div class="btn-container">
         <div class="start-btn" id="start-btn">START</div>
         <div class="how-to-btn" id="how-to-btn">HOW TO PLAY</div>
-      </div>
+      </div> <!-- Start game/instructions button container end -->
 
       <div class="game-container" id="game-container">
         <div class="player-score" id="player-score">
           <p id="game-score">Your Score: 0</p>
-        </div>
-        <div class="ball" id="ball"></div>
+        </div> <!-- Player score end -->
+
+        <div class="ball" id="ball1"></div>
+        <div class="ball2" id="ball2"></div>
+        <div class="ball3" id="ball3"></div>
+        <div class="ball4" id="ball4"></div>
+        <div class="ball5" id="ball5"></div>
+
         <div class="paddle" id="paddle"></div>
-      </div>
+      </div> <!-- Game frame/container end -->
 
       <div class="how-to-modal" id="how-to-modal">
         <div class="how-to-top">
           <header>HOW TO PLAY</header>
-        </div>
-        <div class="how-to-left-right">
+        </div> <!-- How To Play 'top' end -->
+
+        <div class="how-to-middle">
           <p>You are the PADDLE, your enemy is the BALL</p>
           <br>
           <p class="how-to-left">Press 'A' Key to move <strong>LEFT</strong></p>
           <p class="how-to-right">Press 'D' Key to move <strong>RIGHT</strong></p>
-        </div>
+        </div> <!-- How To Play 'middle' end -->
+
         <div class="how-to-bottom">
           <p><em>If ball hits top of screen =</em><strong> BALL +1 & POINTS +1</strong>
           <br>
@@ -45,29 +54,27 @@
           <em>If ball hits bottom of screen =</em><strong> BALL -1</strong>
           <br>
           <br>
-          <em>If all balls hit bottom of screen =</em><strong> GAME OVER</strong>
+          <em>If all balls ON SCREEN hit bottom of screen =</em><strong> GAME OVER</strong>
           <br>
           <br>
           <br>
           <span class="only-the-best">Only the best dare to beat the high score...</span></p>
-        </div>
-      </div>
+        </div> <!-- How To Play 'bottom' end -->
+      </div> <!-- How To Play Modal end -->
 
       <div class="game-over-modal" id="game-over-modal">
         <div class="game-over-top">
           <header>GAME OVER</header>
-        </div>
-        <div class="game-over-middle">
+        </div> <!-- Game Over 'top' end -->
+
+        <div class="game-over-bottom">
           <p id="end-score">YOUR SCORE: 0</p>
           <br>
           <p><span class="dare-to-play">Dare to play again?</span></p>
           <div class="restart-btn" id="restart-btn">RESTART</div>
           <br>
-          <div class="main-menu-btn" id="main-menu-btn">MAIN MENU</div>
-        </div>
-        <div class="game-over-bottom">
-        </div>
-      </div>
+        </div> <!-- Game Over 'bottom' end -->
+       </div> <!-- Game Over Modal end -->
     </main>
   </body>
 </html>
