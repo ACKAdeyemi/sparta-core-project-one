@@ -27,8 +27,8 @@ A week long project with an objective of creating a browser based game using htm
 
 **Story for my Game:** - You, the paddle Spartan, are a glorified warrior with many accolades. The champion of champions.
 At the bottom of the screen is your home land, Sparta.
-Balls of fire are being rained upon your land and it is your job to protect it as best as you can
-You know it’s a suicide mission but honor is everything to you and you would rather die than to flee, allowing your home to be destroyed
+Balls of fire are being rained upon your land and it is your job to protect it as best as you can.
+You know it’s a suicide mission but honor is everything to you and you would rather die than to flee, allowing your home to be destroyed.
 Deflect the balls of fire for as long as you can to prove that YOU are the ultimate warrior!
 
 A wise man once said:
