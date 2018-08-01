@@ -1,5 +1,4 @@
 # <p align="center"> Sparta Core Project One</p>
-<hr>
 
 #### Task:
 A week long project with an objective of creating a browser based game using html, css and javascript.
